@@ -1,0 +1,23 @@
+html {
+    font-family: sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.countdown-timer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.clock-column {
+    margin: 1em;
+}
+
+.clock-column .clock-timer {
+    text-align: center;
+}
