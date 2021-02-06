@@ -3,17 +3,30 @@
 console.log('Hello there.');
 console.log('General Kenobi...');
 
+var distance = 0;
+
 // Initialize time-to input to next New Years Day.
 var currentTime = new Date();
 var nextYear = currentTime.getFullYear() + 1;
-document.getElementById('time-to').value = `${nextYear}-01-01T00:00`;
+if (localStorage.getItem('time-to') === null) {
+    localStorage.setItem('time-to', `${nextYear}-01-01T00:00`);
+}
+
+var timeTo = localStorage.getItem('time-to');
+document.getElementById('time-to').value = timeTo;
+
+
+function handleChange(value) {
+    timeTo = value;
+    localStorage.setItem('time-to', timeTo);
+}
 
 var x = setInterval(() => {
     // Get current date and time.
     var now = new Date().getTime();
 
     // Get the input's value
-    var countdownDate = new Date(document.getElementById('time-to').value)
+    var countdownDate = new Date(timeTo);
 
     // Calculate distance between now and the count down date
     var distance = countdownDate - now;

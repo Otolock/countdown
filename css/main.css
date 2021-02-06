@@ -1,23 +1,25 @@
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 .flex-container {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 }
 
 .countdown-timer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .clock-column {
-    margin: 1em;
+  margin: 1em;
+  width: 75px;
 }
 
-.clock-column .clock-timer {
-    text-align: center;
+.clock-column,
+.clock-timer {
+  text-align: center;
 }
